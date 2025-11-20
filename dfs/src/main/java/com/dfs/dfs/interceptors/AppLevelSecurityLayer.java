@@ -14,7 +14,6 @@ public class AppLevelSecurityLayer implements WebMvcConfigurer {
   @Autowired
   public UserInterceptors userInterceptors;
 
-  @SuppressWarnings("null")
   @Override
   public void addInterceptors(InterceptorRegistry registry) {
     registry.addInterceptor(userInterceptors);
