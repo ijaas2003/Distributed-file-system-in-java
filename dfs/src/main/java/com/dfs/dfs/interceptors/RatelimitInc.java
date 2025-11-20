@@ -14,19 +14,20 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Component
 public class RatelimitInc implements HandlerInterceptor {
-    @Autowired
-    private XMLParserUtil parserUtil;
 
-    @SuppressWarnings("null")
-    @Override
-    public boolean preHandle (HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
-        final boolean isValid = this.parserUtil.validateUrl(request.getRequestURL().toString(), request.getMethod());
-        if (!isValid) {
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
-            response.setContentType("application/text");
-            response.getWriter().println("failed");
-            return false;
-        }
-        return true;
+  @Autowired
+  private XMLParserUtil parserUtil;
+
+  @Override
+  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+      throws IOException {
+    final boolean isValid = this.parserUtil.validateUrl(request.getRequestURL().toString(), request.getMethod());
+    if (!isValid) {
+      response.setStatus(HttpStatus.UNAUTHORIZED.value());
+      response.setContentType("application/text");
+      response.getWriter().println("failed");
+      return false;
     }
+    return true;
+  }
 }
