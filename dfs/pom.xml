@@ -21,7 +21,9 @@
 		<jackson.version>2.18.1</jackson.version>
 		<junit-jupiter.version>5.10.2</junit-jupiter.version>
 		<jedis.version>5.1.4</jedis.version>
-		<kafka.version>3.7.1</kafka.version>
+    <kafka.version>3.7.1</kafka.version>
+<grpc.version>1.62.2</grpc.version>
+    <protobuf.version>3.25.1</protobuf.version>
 	</properties>
 
 	<dependencies>

@@ -12,7 +12,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 public class UserInterceptors implements HandlerInterceptor {
 
-  @SuppressWarnings("null")
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
     Cookie[] cookies = request.getCookies();
