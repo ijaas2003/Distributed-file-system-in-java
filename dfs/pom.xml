@@ -86,6 +86,11 @@
         <artifactId>grpc-netty</artifactId>
         <version>${grpc.version}</version>
     </dependency>
+         <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-netty-shaded</artifactId>
+        <version>1.61.0</version>
+    </dependency>
     <dependency>
         <groupId>io.grpc</groupId>
         <artifactId>grpc-protobuf</artifactId>
