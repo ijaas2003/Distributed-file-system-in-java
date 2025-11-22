@@ -18,6 +18,5 @@ public class User {
     Map<String, Object> map = new HashMap<>();
     map.put("success", "sucess");
     return ResponseEntity.status(HttpStatus.OK).body(map);
-
   }
 }
