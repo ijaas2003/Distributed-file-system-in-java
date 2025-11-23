@@ -22,8 +22,8 @@ public class RedisConfiguration {
   @Value("${spring.redis.timeout")
   private int timeout;
 
-  @Bean
-  public JedisPool jedisPool() {
+    @Bean
+    JedisPool jedisPool() {
     JedisPoolConfig jedisPool = new JedisPoolConfig();
     jedisPool.setMaxIdle(20);
     jedisPool.setMinIdle(2);
