@@ -7,8 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = {
   "com.dfs.dfs",
-  "com.ratelimit.ratelimit",
-  "com.dfs.dfs.GRPC_Configuration"
+  "com.ratelimit.ratelimit"
 })
 public class DfsApplication {
   public static void main(String[] args) {
