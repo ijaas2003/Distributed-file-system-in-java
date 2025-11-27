@@ -13,9 +13,6 @@ public class RedisConfiguration {
   @Value("${spring.redis.host}")
   private String host;
 
-  @Value("${spring.redis.password}")
-  private String password;
-
   @Value("${spring.redis.port}")
   private int port;
 
@@ -29,6 +26,6 @@ public class RedisConfiguration {
     jedisPool.setMinIdle(2);
     jedisPool.setBlockWhenExhausted(true);
 
-    return new JedisPool(jedisPool, host, port, timeout, password);
+    return new JedisPool(jedisPool, host, port, timeout);
   }
 }
